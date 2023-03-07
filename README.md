@@ -39,49 +39,6 @@ let subscriber = bucketListItems.publisher.sink(receiveCompletion: { completion 
 // << 🔵 Run Point
 ```
 
-
-
-
-
-
-
-[Download](https://github.com/MatthewpHarding/FREE-PLAYGROUND-swiftui/archive/refs/heads/main.zip) this Swift playground file to run the example given in [Xcode](https://developer.apple.com/xcode).
-
-## This Playground Teaches 👨🏻‍🏫
-How to create and display a SwiftUI view inside a Swift playground. 
-
-Swift playgrounds now support displaying both a UIKit and a SwiftUI view *(both are different UI frameworks)* within a Swift playground. The support isn't advanced or in-depth however it will be enough to try something out or maybe just to add a visual layer to your code.
-
-The code to display a SwiftUI `View` will look something like this:
-
-```Swift
-// MARK: - 📦 Sourcecode
-import SwiftUI // import all the UI code
-import PlaygroundSupport // import the ability to use a live view
-
-class ViewModel: ObservableObject {
-    let title: String
-    init(title: String) {
-        self.title = title
-    }
-}
-
-struct ContentView: View {
-    
-    @StateObject var viewModel: ViewModel
-    
-    var body: some View {
-        Text(viewModel.title)
-    }
-}
-
-// MARK: - ⚡️ Execution Area
-let viewModel = ViewModel(title: "Learn Swift")
-let contentView = ContentView(viewModel: viewModel)
-PlaygroundPage.current.setLiveView(contentView)
-// << 🔵 Run Point
-```
-
 ## How To Download ⬇️
 You can download this Swift playground by clicking the `Code` button at the top of this page. 
 
